@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact | Eco Committee</title>
+  <title>Contact | Greenaissance</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body data-title="nav_contact">
@@ -19,15 +19,15 @@
 
     <section>
       <div class="container grid grid-2">
-        <div class="card">
-          <ul class="contact-list">
-            <li><span class="ci">✉️</span><div><strong data-i18n="label_email"></strong><a id="contact-email" href="#"></a></div></li>
-            <li><span class="ci">📞</span><div><strong data-i18n="label_phone"></strong><a id="contact-phone" href="#"></a></div></li>
-            <li><span class="ci">📍</span><div><strong data-i18n="label_address"></strong><span data-i18n="value_address"></span></div></li>
+        <div class="card" id="contact-info-card">
+          <ul class="contact-list" id="contact-list">
+            <li id="contact-email-item"><span class="ci">✉️</span><div><strong data-i18n="label_email"></strong><a id="contact-email" href="#"></a></div></li>
+            <li id="contact-phone-item"><span class="ci">📞</span><div><strong data-i18n="label_phone"></strong><a id="contact-phone" href="#"></a></div></li>
           </ul>
+          <p class="contact-soon" id="contact-soon" data-i18n="contact_soon"></p>
         </div>
 
-        <div class="card">
+        <div class="card" id="contact-form-card">
           <form id="contact-form">
             <label for="f-name" data-i18n="form_name"></label>
             <input id="f-name" name="name" type="text" required>

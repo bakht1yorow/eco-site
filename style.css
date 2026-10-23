@@ -265,3 +265,17 @@ form textarea { min-height: 130px; resize: vertical; }
   padding: 28px 0;
   font-size: 0.9rem;
 }
+
+/* v3 additions */
+.hero .badge-school:empty, .brand small:empty { display: none; }
+.goal .tag { margin-bottom: 8px; display: inline-block; }
+.team-note { text-align: center; color: var(--muted); margin-top: 28px; }
+.contact-soon { color: var(--muted); }
+.hidden { display: none !important; }
+
+/* v4: team grid */
+.grid-team { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.member { padding: 22px 14px; }
+.member h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.member .role { font-size: 0.85rem; line-height: 1.35; margin-top: 3px; }
+.member .avatar { width: 120px; height: 120px; }
