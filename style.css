@@ -198,3 +198,5 @@ main{flex:1}
 .map-info a{font-weight:600;margin-top:6px}
 #contact-form-card h3{font-size:1.3rem;margin-bottom:6px}
 @media (max-width:960px){.contact-main{grid-template-columns:1fr}}
+.contact-main:has(#contact-form-card.hidden){grid-template-columns:1fr}
+.contact-main:has(#contact-form-card.hidden) .map-card{min-height:460px}
