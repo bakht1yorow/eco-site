@@ -279,3 +279,5 @@ form textarea { min-height: 130px; resize: vertical; }
 .member h3 { font-size: 1.05rem; margin-bottom: 6px; }
 .member .role { font-size: 0.85rem; line-height: 1.35; margin-top: 3px; }
 .member .avatar { width: 120px; height: 120px; }
+.tg-embed { margin: 14px 0 8px; max-width: 560px; }
+.tg-embed iframe { max-width: 100% !important; }
