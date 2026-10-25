@@ -153,3 +153,59 @@ document.addEventListener("DOMContentLoaded", () => {
   applyLang();
 });
 
+
+// ---- Lightbox: open gallery photos on the page instead of a new tab ----
+(function () {
+  let box, img, items = [], idx = 0, startX = 0;
+  function build() {
+    box = document.createElement("div");
+    box.className = "lb";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.innerHTML = '<button class="lb-close" aria-label="Close">&times;</button>' +
+      '<button class="lb-nav lb-prev" aria-label="Previous">&#8249;</button>' +
+      '<img alt=""><button class="lb-nav lb-next" aria-label="Next">&#8250;</button>' +
+      '<div class="lb-count"></div>';
+    document.body.appendChild(box);
+    img = box.querySelector("img");
+    box.addEventListener("click", e => { if (e.target === box || e.target.classList.contains("lb-close")) close(); });
+    box.querySelector(".lb-prev").addEventListener("click", () => step(-1));
+    box.querySelector(".lb-next").addEventListener("click", () => step(1));
+    box.addEventListener("touchstart", e => { startX = e.touches[0].clientX; }, { passive: true });
+    box.addEventListener("touchend", e => {
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1);
+    });
+  }
+  function show() {
+    img.src = items[idx].href;
+    box.querySelector(".lb-count").textContent = items.length > 1 ? (idx + 1) + " / " + items.length : "";
+    box.classList.toggle("single", items.length < 2);
+  }
+  function step(d) { idx = (idx + d + items.length) % items.length; show(); }
+  function open(list, i) {
+    if (!box) build();
+    items = list; idx = i; show();
+    box.classList.add("open");
+    document.body.classList.add("lb-lock");
+    box.querySelector(".lb-close").focus();
+  }
+  function close() {
+    box.classList.remove("open");
+    document.body.classList.remove("lb-lock");
+    img.src = "";
+  }
+  document.addEventListener("click", e => {
+    const a = e.target.closest(".gallery a");
+    if (!a) return;
+    e.preventDefault();
+    const list = Array.from(a.parentElement.querySelectorAll("a"));
+    open(list, list.indexOf(a));
+  });
+  document.addEventListener("keydown", e => {
+    if (!box || !box.classList.contains("open")) return;
+    if (e.key === "Escape") close();
+    else if (e.key === "ArrowRight") step(1);
+    else if (e.key === "ArrowLeft") step(-1);
+  });
+})();
