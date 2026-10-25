@@ -16,6 +16,7 @@ const PAGES = [
   ["team", "nav_team"],
   ["projects", "nav_projects"],
   ["news", "nav_news"],
+  ["achievements", "nav_awards"],
   ["contact", "nav_contact"]
 ];
 

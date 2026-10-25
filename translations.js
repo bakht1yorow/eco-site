@@ -219,7 +219,7 @@ const TRANSLATIONS = {
 
     // Achievements
     awards_title: "Achievements / Awards",
-    awards_intro: "Our results and awards will be added here. For now, these are the goals we work toward.",
+    awards_intro: "Awards and recognition our Eco Committee has received.",
     tag_goal: "Goal",
     g1_title: "Sorted waste at school",
     g1_text: "Separate bins for paper, plastic and batteries, used by everyone.",
@@ -462,7 +462,7 @@ const TRANSLATIONS = {
     n3_text: "Maktab eko-loyihasi uchun g'oyangiz bormi? Bizga ayting, uni amalga oshirishga harakat qilamiz.",
 
     awards_title: "Yutuqlar / Mukofotlar",
-    awards_intro: "Natijalarimiz va mukofotlarimiz shu yerga qo'shiladi. Hozircha bular biz intilayotgan maqsadlar.",
+    awards_intro: "Eko-qo'mitamiz erishgan mukofotlar va e'tirof.",
     tag_goal: "Maqsad",
     g1_title: "Maktabda saralangan chiqindi",
     g1_text: "Qog'oz, plastik va batareyalar uchun alohida idishlar, ulardan hamma foydalanadi.",
@@ -704,7 +704,7 @@ const TRANSLATIONS = {
     n3_text: "Есть идея для школьного эко-проекта? Расскажите нам, и мы постараемся её осуществить.",
 
     awards_title: "Достижения / Награды",
-    awards_intro: "Здесь появятся наши результаты и награды. А пока это цели, к которым мы идём.",
+    awards_intro: "Награды и признание, которые получил наш Эко-комитет.",
     tag_goal: "Цель",
     g1_title: "Раздельный сбор отходов в школе",
     g1_text: "Отдельные контейнеры для бумаги, пластика и батареек, которыми пользуются все.",
