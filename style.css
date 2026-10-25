@@ -19,7 +19,7 @@
   --r-s:10px;
   --font:'Onest',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   --display:'Unbounded','Onest',system-ui,sans-serif;
-  --star:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.09' stroke-width='1.2'%3E%3Cpath d='M36 6l7 13 14-5-5 14 13 7-13 7 5 14-14-5-7 13-7-13-14 5 5-14-13-7 13-7-5-14 14 5z'/%3E%3Ccircle cx='36' cy='36' r='8'/%3E%3C/g%3E%3C/svg%3E");
+  --star:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.15' stroke-width='1.2'%3E%3Cpath d='M36 6l7 13 14-5-5 14 13 7-13 7 5 14-14-5-7 13-7-13-14 5 5-14-13-7 13-7-5-14 14 5z'/%3E%3Ccircle cx='36' cy='36' r='8'/%3E%3C/g%3E%3C/svg%3E");
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -204,3 +204,29 @@ form input:focus,form textarea:focus{outline:3px solid var(--saffron);border-col
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;scroll-behavior:auto!important}
 }
+
+/* ---------- Extra flair ---------- */
+:root{--star-big:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none'%3E%3Cg stroke='%23f2b21c' stroke-width='1.4'%3E%3Cpath d='M100 8l19 36 39-14-14 39 36 19-36 19 14 39-39-14-19 36-19-36-39 14 14-39-36-19 36-19-14-39 39 14z'/%3E%3Ccircle cx='100' cy='100' r='26'/%3E%3C/g%3E%3Cg stroke='%2335c4d2' stroke-width='1'%3E%3Ccircle cx='100' cy='100' r='62'/%3E%3Ccircle cx='100' cy='100' r='92' stroke-dasharray='2 6'/%3E%3C/g%3E%3C/svg%3E");--orn:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath fill='%23f2b21c' d='M20 1l5 10 11-4-4 11 10 5-10 5 4 11-11-4-5 10-5-10-11 4 4-11-10-5 10-5-4-11 11 4z'/%3E%3C/svg%3E")}
+.hero::before{content:"";position:absolute;right:-140px;top:50%;width:760px;height:760px;margin-top:-380px;background:var(--star-big) center/contain no-repeat;opacity:.5;animation:spin 120s linear infinite;pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(520px 360px at 82% 40%,rgba(22,147,160,.35),transparent 70%),radial-gradient(420px 300px at 5% 100%,rgba(47,158,95,.3),transparent 70%);pointer-events:none}
+.hero .container{position:relative;z-index:1}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero h1{background:linear-gradient(100deg,#fff 40%,#ffd978);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-photos img{box-shadow:0 18px 40px rgba(0,0,0,.35),0 0 0 4px rgba(242,178,28,.35)}
+.page-title{position:relative;overflow:hidden}
+.page-title::after{content:"";position:absolute;right:-60px;top:50%;width:340px;height:340px;margin-top:-170px;background:var(--star-big) center/contain no-repeat;opacity:.45;animation:spin 140s linear infinite}
+.page-title .container{position:relative;z-index:1}
+.section-title::before{content:"";display:inline-block;width:26px;height:26px;margin-right:12px;vertical-align:-3px;background:var(--orn) center/contain no-repeat}
+.cta::after{content:"";position:absolute;right:-90px;bottom:-110px;width:380px;height:380px;background:var(--star-big) center/contain no-repeat;opacity:.55;animation:spin 100s linear infinite}
+.cta>*{position:relative;z-index:1}
+.card{transition:transform .25s,box-shadow .25s,border-color .25s}
+.grid-3>.card:hover,.award:hover,.news-item:hover,.project:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(22,147,160,.16);border-color:var(--tile)}
+.band .strip a{box-shadow:0 14px 30px rgba(13,43,32,.18)}
+.band .strip a::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(13,43,32,.55));opacity:0;transition:opacity .3s}
+.band .strip a:hover::after{opacity:1}
+.site-header{backdrop-filter:blur(10px);background-color:rgba(13,43,32,.94)}
+.site-footer::before{content:"";display:block;width:34px;height:34px;margin:0 auto 12px;background:var(--orn) center/contain no-repeat}
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (max-width:960px){.hero::before{width:480px;height:480px;margin-top:-240px;right:-200px;opacity:.35}}
+@media (prefers-reduced-motion:reduce){.hero::before,.page-title::after,.cta::after{animation:none}.js .reveal{opacity:1;transform:none}}

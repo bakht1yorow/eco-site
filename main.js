@@ -145,3 +145,11 @@ document.addEventListener("DOMContentLoaded", () => {
   setupContact();
   applyLang();
 });
+
+// Gentle reveal on scroll (cards and photo strip only)
+(function(){
+  if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  document.documentElement.classList.add("js");
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.08});
+  addEventListener("load",()=>document.querySelectorAll(".grid-3>.card,.strip a,.cta,.member").forEach(el=>{el.classList.add("reveal");io.observe(el);}));
+})();
