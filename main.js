@@ -50,17 +50,9 @@ function renderHeader() {
     `<button type="button" data-lang="${code}">${label}</button>`
   ).join("");
 
-  const leaf = `<svg viewBox="0 0 48 48" aria-hidden="true">
-      <circle cx="24" cy="24" r="23" fill="#2f9e5f"/>
-      <path d="M12 34c0-12 8-20 24-20 0 14-8 22-20 22" fill="#f5f7f2"/>
-      <path d="M13 35c6-8 12-12 20-16" stroke="#1f7a4d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    </svg>`;
-
   document.getElementById("site-header").innerHTML = `
     <div class="container header-inner">
-      <a class="brand" href="./">${leaf}
-        <span><span data-i18n="site_name"></span><small data-i18n="school_name"></small></span>
-      </a>
+      <a class="brand" href="./"><img src="logo.png" alt="Greenaissance Eco-Committee BPS"></a>
       <nav class="nav" id="nav">${links}</nav>
       <div class="header-right">
         <div class="lang-switch">${langs}</div>
@@ -78,7 +70,7 @@ function renderHeader() {
 
 function renderFooter() {
   document.getElementById("site-footer").innerHTML =
-    `<div class="container"><p data-i18n="footer_text"></p></div>`;
+    `<div class="container"><img src="logo.png" alt=""><p data-i18n="footer_text"></p></div>`;
 }
 
 function applyLang() {
