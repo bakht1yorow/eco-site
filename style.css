@@ -285,3 +285,6 @@ form textarea { min-height: 130px; resize: vertical; }
 .gallery a { display: block; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 10px; background: #e6efe8; }
 .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .25s; }
 .gallery a:hover img { transform: scale(1.04); }
+.gallery.docs{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+.gallery.docs a{aspect-ratio:3/4}
+.gallery.docs img{object-position:top}
