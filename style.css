@@ -289,3 +289,8 @@ form textarea { min-height: 130px; resize: vertical; }
 .gallery.docs a{aspect-ratio:3/4}
 .gallery.docs img{object-position:top}
 .gallery.sq a{aspect-ratio:1}
+.project{border-left:6px solid var(--green-500)}
+.project h4{color:var(--green-900);margin:16px 0 6px}
+.pr-list{margin:0 0 4px 20px;color:var(--muted)}
+.pr-list li{margin:4px 0}
+.pr-focus{margin-top:6px}
