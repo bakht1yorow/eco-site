@@ -111,7 +111,7 @@ section{padding:88px 0}
 
 /* ---------- News / projects ---------- */
 .news-item{padding:32px}
-body[data-title="nav_news"] main>section>.container.grid,body[data-title="nav_projects"] main>section>.container.grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:28px}
+body[data-title="nav_news"] main>section>.container.grid,body[data-title="nav_projects"] main>section>.container.grid,body[data-title="nav_awards"] main>section>.container.grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:28px}
 .news-meta{display:flex;align-items:center;gap:12px;margin-bottom:12px;color:var(--muted);font-size:.9rem;font-weight:500}
 .tag{display:inline-block;background:var(--soft);color:var(--ink-2);padding:4px 12px;border-radius:999px;font-size:.8rem;font-weight:600}
 .tag-event{background:#e7f3cf;color:#3d5a12}
