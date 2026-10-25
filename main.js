@@ -5,8 +5,8 @@
 // ---- Add your real contact details here (leave "" to hide them) ----
 const CONFIG = {
   email: "",
-  telegram: "https://t.me/pmbuxoro",
-  instagram: "",
+  telegram: "https://t.me/ecoschoolbukhps",
+  instagram: "https://www.instagram.com/greenaissance.bps/",
   phone: ""
 };
 
