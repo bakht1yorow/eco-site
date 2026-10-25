@@ -5,6 +5,8 @@
 // ---- Add your real contact details here (leave "" to hide them) ----
 const CONFIG = {
   email: "",
+  telegram: "https://t.me/pmbuxoro",
+  instagram: "",
   phone: ""
 };
 
@@ -110,6 +112,10 @@ function setupContact() {
   const phoneEl = document.getElementById("contact-phone");
   if (hasPhone) { phoneEl.textContent = CONFIG.phone; phoneEl.href = "tel:" + CONFIG.phone.replace(/\s/g, ""); }
 
+  const tg=document.getElementById("cc-telegram"), ig=document.getElementById("cc-instagram"), em=document.getElementById("cc-email");
+  if (tg) { tg.classList.toggle("hidden", !CONFIG.telegram); if (CONFIG.telegram) tg.href = CONFIG.telegram; }
+  if (ig) { ig.classList.toggle("hidden", !CONFIG.instagram); if (CONFIG.instagram) ig.href = CONFIG.instagram; }
+  if (em) { em.classList.toggle("hidden", !hasEmail); if (hasEmail) { em.href = "mailto:" + CONFIG.email; document.getElementById("cc-email-val").textContent = CONFIG.email; } }
   show("contact-email-item", hasEmail);
   show("contact-phone-item", hasPhone);
   show("contact-form-card", hasEmail);

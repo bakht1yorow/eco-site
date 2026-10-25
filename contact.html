@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Greenaissance</title>
   <link rel="icon" href="favicon.png">
-  <link rel="stylesheet" href="style.css?v=1792941248">
+  <link rel="stylesheet" href="style.css?v=1792941487">
 </head>
 <body data-title="nav_contact">
   <header class="site-header" id="site-header"></header>
@@ -19,37 +19,40 @@
     </div>
 
     <section>
-      <div class="container grid grid-2">
-        <div class="card" id="contact-info-card">
-          <ul class="contact-list" id="contact-list">
-            <li id="contact-email-item"><span class="ci">✉️</span><div><strong data-i18n="label_email"></strong><a id="contact-email" href="#"></a></div></li>
-            <li><span class="ci">📍</span><div><strong data-i18n="c_pl_label"></strong><span data-i18n="c_pl_text"></span></div></li>
-            <li><span class="ci">💬</span><div><strong data-i18n="c_tg_label"></strong><a href="https://t.me/pmbuxoro" target="_blank" rel="noopener" data-i18n="c_tg_text"></a></div></li>
-            <li id="contact-phone-item"><span class="ci">📞</span><div><strong data-i18n="label_phone"></strong><a id="contact-phone" href="#"></a></div></li>
-          </ul>
-          <p class="contact-soon" id="contact-soon" data-i18n="contact_soon"></p>
-          <p><a class="btn btn-green" href="team" data-i18n="nav_team"></a></p>
+      <div class="container">
+        <div class="channels">
+          <a class="channel" id="cc-telegram" href="#" target="_blank" rel="noopener"><span class="ch-ico">✈️</span><strong data-i18n="c_tg_label"></strong><small data-i18n="c_tg_text"></small></a>
+          <a class="channel hidden" id="cc-instagram" href="#" target="_blank" rel="noopener"><span class="ch-ico">📷</span><strong>Instagram</strong><small data-i18n="c_ig_text"></small></a>
+          <a class="channel hidden" id="cc-email" href="#"><span class="ch-ico">✉️</span><strong data-i18n="label_email"></strong><small id="cc-email-val"></small></a>
         </div>
-        <div class="contact-photo"><img src="img/n05-1.jpg" alt="" loading="lazy"></div>
 
-        <div class="card" id="contact-form-card">
-          <form id="contact-form">
-            <label for="f-name" data-i18n="form_name"></label>
-            <input id="f-name" name="name" type="text" required>
-            <label for="f-email" data-i18n="form_email"></label>
-            <input id="f-email" name="email" type="email" required>
-            <label for="f-msg" data-i18n="form_message"></label>
-            <textarea id="f-msg" name="message" required></textarea>
-            <p style="margin-top:16px"><button class="btn btn-green" type="submit" data-i18n="form_send"></button></p>
-            <p class="form-note" data-i18n="form_note"></p>
-          </form>
+        <div class="contact-main">
+          <div class="map-card">
+            <iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Bukhara+Presidential+School&amp;output=embed"></iframe>
+            <div class="map-info"><strong data-i18n="c_pl_label"></strong><span data-i18n="c_pl_text"></span>
+              <a href="https://maps.google.com/?q=Bukhara+Presidential+School" target="_blank" rel="noopener" data-i18n="c_map_open"></a></div>
+          </div>
+          <div class="card" id="contact-form-card">
+            <h3 data-i18n="c_form_title"></h3>
+            <form id="contact-form">
+              <label for="f-name" data-i18n="form_name"></label>
+              <input id="f-name" name="name" type="text" required>
+              <label for="f-email" data-i18n="form_email"></label>
+              <input id="f-email" name="email" type="email" required>
+              <label for="f-msg" data-i18n="form_message"></label>
+              <textarea id="f-msg" name="message" rows="5" required></textarea>
+              <p style="margin-top:16px"><button class="btn btn-green" type="submit" data-i18n="form_send"></button></p>
+              <p class="form-note" data-i18n="form_note"></p>
+            </form>
+          </div>
         </div>
+        <div id="contact-info-card" class="hidden"><ul id="contact-list"><li id="contact-email-item"><a id="contact-email"></a></li><li id="contact-phone-item"><a id="contact-phone"></a></li></ul><p id="contact-soon"></p></div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer" id="site-footer"></footer>
-  <script src="translations.js?v=1792941248"></script>
-  <script src="main.js?v=1792941248"></script>
+  <script src="translations.js?v=1792941487"></script>
+  <script src="main.js?v=1792941487"></script>
 </body>
 </html>
