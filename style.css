@@ -35,7 +35,7 @@ a:hover{color:var(--ink-2)}
 .site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);box-shadow:0 2px 14px rgba(11,61,38,.06)}
 .header-inner{display:flex;align-items:center;gap:20px;min-height:72px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;flex-shrink:0}
-.brand img{height:52px;width:auto}
+.brand img{height:70px;width:auto;margin:4px 0}
 .brand span{display:flex;flex-direction:column;line-height:1.15}
 .brand span>span{font-family:var(--display);font-weight:600;font-size:1.02rem;letter-spacing:.2px}
 .brand small{font-size:.72rem;color:#a9c9b8;font-weight:500;margin-top:3px}
@@ -224,4 +224,4 @@ form input:focus,form textarea:focus{outline:3px solid var(--saffron);border-col
 .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .js .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none}}
-@media (max-width:520px){.brand img{height:42px}}
+@media (max-width:520px){.brand img{height:56px}}
