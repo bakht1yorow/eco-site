@@ -43,6 +43,7 @@ const TRANSLATIONS = {
 
     // Projects
     projects_title: "Eco Projects",
+    projects_empty: "No projects yet.",
     projects_intro: "Our team works in these areas. In each one, we check how our school is doing and look for ways to make it greener.",
     f1_title: "Water & Sanitation",
     f1_text: "We check how water is used at school and how clean the toilets and sinks are, and we look for ways to save water.",
@@ -134,6 +135,7 @@ const TRANSLATIONS = {
     r_health: "Audit va monitoring rahbari: sog'lom turmush tarzi",
 
     projects_title: "Eko loyihalar",
+    projects_empty: "Hozircha loyihalar yo'q.",
     projects_intro: "Jamoamiz shu yo'nalishlarda ishlaydi. Har birida maktabimiz ahvolini tekshiramiz va uni yanada yashil qilish yo'llarini izlaymiz.",
     f1_title: "Suv va sanitariya",
     f1_text: "Maktabda suv qanday ishlatilishini, hojatxona va jo'mraklar qanchalik toza ekanini tekshiramiz va suvni tejash yo'llarini izlaymiz.",
@@ -222,6 +224,7 @@ const TRANSLATIONS = {
     r_health: "Руководитель аудита и мониторинга: здоровый образ жизни",
 
     projects_title: "Эко-проекты",
+    projects_empty: "Пока проектов нет.",
     projects_intro: "Наша команда работает в этих направлениях. В каждом из них мы проверяем, как дела в школе, и ищем способы сделать её зеленее.",
     f1_title: "Вода и санитария",
     f1_text: "Мы смотрим, как в школе используют воду и насколько чисты туалеты и раковины, и ищем способы экономить воду.",
