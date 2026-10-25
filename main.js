@@ -72,8 +72,17 @@ function renderHeader() {
 }
 
 function renderFooter() {
+  const links = PAGES.map(([slug, key]) =>
+    `<a href="${slug === "index" ? "./" : slug}" data-i18n="${key}"></a>`).join("");
+  const soc = [];
+  if (CONFIG.telegram) soc.push(`<a class="soc soc-tg" href="${CONFIG.telegram}" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path fill="#fff" d="M9.4 15.6l-.4 4.1c.6 0 .8-.3 1.1-.5l2.6-2.4 5.4 4c1 .5 1.7.3 2-.9l3.6-16.7c.3-1.5-.5-2-1.5-1.7L1.1 10.7c-1.4.5-1.4 1.3-.2 1.7l5.5 1.7 12.7-8c.6-.4 1.1-.2.7.2z"/></svg></a>`);
+  if (CONFIG.instagram) soc.push(`<a class="soc soc-ig" href="${CONFIG.instagram}" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.3" cy="6.7" r="1.2" fill="#fff" stroke="none"/></svg></a>`);
   document.getElementById("site-footer").innerHTML =
-    `<div class="container"><img src="logo-light.png" alt=""><p data-i18n="footer_text"></p></div>`;
+    `<div class="container foot">
+       <div class="foot-brand"><img src="logo-light.png" alt=""><p data-i18n="footer_text"></p></div>
+       <nav class="foot-links">${links}</nav>
+       <div class="foot-soc">${soc.join("")}</div>
+     </div>`;
 }
 
 function applyLang() {

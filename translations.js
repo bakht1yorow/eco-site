@@ -138,7 +138,8 @@ const TRANSLATIONS = {
 
     // News
     news_title: "News & Events",
-    news_intro: "News and events of our committee will appear here.",
+    news_intro: "Updates from our committee and the wider school eco community.",
+    see_all: "View all",
     tag_news: "News",
     tag_join: "Join",
     tag_ideas: "Ideas",
@@ -395,7 +396,8 @@ const TRANSLATIONS = {
     f6_text: "Maktab issiqxonasida o'simliklar o'stiramiz va ularga qanday qarashni o'rganamiz.",
 
     news_title: "Yangiliklar va tadbirlar",
-    news_intro: "Qo'mitamizning yangiliklari va tadbirlari shu yerda paydo bo'ladi.",
+    news_intro: "Qo'mitamiz va maktabimiz eko-hamjamiyatidan yangiliklar.",
+    see_all: "Barchasi",
     tag_news: "Yangilik",
     tag_join: "Qo'shiling",
     tag_ideas: "G'oyalar",
@@ -650,7 +652,8 @@ const TRANSLATIONS = {
     f6_text: "Мы выращиваем растения в школьной теплице и учимся за ними ухаживать.",
 
     news_title: "Новости и события",
-    news_intro: "Новости и события нашего комитета появятся здесь.",
+    news_intro: "Новости нашего комитета и школьного эко-сообщества.",
+    see_all: "Смотреть все",
     tag_news: "Новость",
     tag_join: "Вступайте",
     tag_ideas: "Идеи",
