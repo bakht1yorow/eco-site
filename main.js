@@ -52,8 +52,8 @@ function renderHeader() {
   ).join("");
 
   const leaf = `<svg viewBox="0 0 48 48" aria-hidden="true">
-      <circle cx="24" cy="24" r="23" fill="#3fae6a"/>
-      <path d="M12 34c0-12 8-20 24-20 0 14-8 22-20 22" fill="#f7faf5"/>
+      <circle cx="24" cy="24" r="23" fill="#2f9e5f"/>
+      <path d="M12 34c0-12 8-20 24-20 0 14-8 22-20 22" fill="#f5f7f2"/>
       <path d="M13 35c6-8 12-12 20-16" stroke="#1f7a4d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
     </svg>`;
 
